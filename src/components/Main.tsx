@@ -4,7 +4,6 @@ import { useForm } from "react-hook-form";
 import {
 	Form,
 	FormControl,
-	FormDescription,
 	FormField,
 	FormItem,
 	FormLabel,
@@ -66,7 +65,7 @@ export default function Main() {
 
 	return (
 		<div className="bg-white rounded-[24px] p-[20px] sm:p-[36px] flex flex-col gap-[36px]">
-			{/* Process steps */}
+			{/* PROCESS STEPS */}
 			<div className="flex flex-row justify-between gap-[6px] w-full max-w-[630px] m-auto text-[12px] text-center sm:text-[16px] ">
 				<div className="flex flex-col sm:flex-row gap-[10px] items-center">
 					<div className="flex w-[34px] h-[34px] rounded-full bg-secondary justify-center items-center text-white">
@@ -91,7 +90,7 @@ export default function Main() {
 			</div>
 
 			<div className="flex flex-col-reverse items-center lg:items-stretch lg:flex-row justify-around gap-[36px]">
-				{/* Form */}
+				{/* Form : LEFT SIDE (DESKTOP) / BOTTOM (Mobile) */}
 				<div className="w-full max-w-[475px]">
 					<h1 className="text-[20px] sm:text-[30px] font-bold">Your Details</h1>
 					<Form {...form}>
@@ -264,6 +263,7 @@ export default function Main() {
 						</Button>
 					</Form>
 				</div>
+        {/* Price and Illutstration : Right side (Desktop) / upper side (Mobile) */}
 				<div className="w-full flex flex-col items-center justify-around max-w-[475px]">
 					<div className="h-[300px]">
 						<img

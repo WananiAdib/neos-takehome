@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function Navbar() {
   return (
     <div className='flex flex-row justify-between py-[40px] w-full items-center'>

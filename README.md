@@ -1,30 +1,45 @@
-# React + TypeScript + Vite
+# Neos Online Assessment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Introduction
+In this repo, I tried to recreate the website page in this [Figma File](https://www.figma.com/file/fLbFBhIaFhl6dVf0BCeFdM/Neos-Full-Stack-Engineer---Figma-Test?type=design&node-id=2-106&mode=design&t=cAleaGfg5ZoL5RY7-0). The website page is fully responsive and includes form validation, with the results being logged to the console.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## How to use it
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+Clone the repo and run the following command:
+```
+npm i
+```
+After installing the depencies, you can run the development using:
+```
+npm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Or otherwise, you can build it locally using:
+```
+npm run build
+```
+Followed by:
+```
+npm run preview
+```
+
+## How was it built?
+
+#### Technologies Used:
+- Vite
+- React
+- TypeScript
+- Tailwind CSS
+- PostCSS
+
+
+Form handling was used with the library React Hook Form.
+
+I also added validation to the form, using Zod before being able to send:
+
+![Validation](public/animation.gif)
+
+I have also used Shadcn to install some boiler plates that I ended up by modifying to comply with the styling requirements.
+
+
