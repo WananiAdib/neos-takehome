@@ -6,7 +6,7 @@ export default function Navbar() {
       <div className='h-[28px] w-[100px]'>
         <img src='/neos_logo.png' alt='neon logo' className='object-cover' />
       </div>
-      <div className='flex flex-row gap-[32px] items-center text-[20px] font-bold'>
+      <div className='flex flex-row gap-[16px] sm:gap-[32px] items-center text-[16px] sm:text-[20px] font-bold'>
         <div className='text-white'>
           FAQ
         </div>

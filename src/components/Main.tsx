@@ -1,4 +1,3 @@
-import React from "react";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -66,41 +65,41 @@ export default function Main() {
 	}
 
 	return (
-		<div className="bg-white rounded-[24px] p-[36px] flex flex-col gap-[36px]">
+		<div className="bg-white rounded-[24px] p-[20px] sm:p-[36px] flex flex-col gap-[36px]">
 			{/* Process steps */}
-			<div className="flex flex-row justify-between gap-[6px] w-full max-w-[630px] m-auto">
-				<div className="flex gap-[10px] items-center">
+			<div className="flex flex-row justify-between gap-[6px] w-full max-w-[630px] m-auto text-[12px] text-center sm:text-[16px] ">
+				<div className="flex flex-col sm:flex-row gap-[10px] items-center">
 					<div className="flex w-[34px] h-[34px] rounded-full bg-secondary justify-center items-center text-white">
 						1
 					</div>
 					<p>Receive offer</p>
 				</div>
-				<div className="h-[2px] bg-secondary grow m-auto " />
-				<div className="flex gap-[10px] items-center">
+				<div className="h-[2px] bg-secondary grow mt-[16px] sm:m-auto" />
+				<div className="flex flex-col sm:flex-row gap-[10px] items-center">
 					<div className="flex w-[34px] h-[34px] rounded-full bg-secondary justify-center items-center text-white">
 						2
 					</div>
-					<p>Receive offer</p>
+					<p>Sign Contract</p>
 				</div>
-				<div className="h-[2px] bg-gray-400 grow  m-auto " />
-				<div className="flex gap-[10px] items-center">
-					<div className="flex w-[34px] h-[34px] rounded-full bg-gray-400 justify-center items-center text-white">
+				<div className="h-[2px] bg-gray-200 grow  mt-[16px] sm:m-auto " />
+				<div className="flex flex-col sm:flex-row gap-[10px] items-center">
+					<div className="flex w-[34px] h-[34px] rounded-full bg-gray-200 justify-center items-center text-black">
 						3
 					</div>
 					<p>Enjoy Solar</p>
 				</div>
 			</div>
 
-			<div className="flex justify-around">
+			<div className="flex flex-col-reverse items-center lg:items-stretch lg:flex-row justify-around gap-[36px]">
 				{/* Form */}
 				<div className="w-full max-w-[475px]">
-					<h1 className="text-[30px] font-bold">Your Details</h1>
+					<h1 className="text-[20px] sm:text-[30px] font-bold">Your Details</h1>
 					<Form {...form}>
 						<div
 							onSubmit={form.handleSubmit(onSubmit)}
-							className="px-[24px] py-[10px] border-[1px] rounded-2xl divide-y-2 my-[20px]"
+							className="px-[16px] sm:px-[24px] py-[2px] border-[1px] rounded-2xl divide-y-2 my-[20px]"
 						>
-							<div className="flex">
+							<div className="flex flex-col divide-y-2 md:divide-y-0 md:flex-row">
 								<FormField
 									control={form.control}
 									name="firstName"
@@ -134,7 +133,7 @@ export default function Main() {
 									)}
 								/>
 							</div>
-							<div className="flex">
+							<div className="flex flex-col divide-y-2 md:divide-y-0 md:flex-row">
 								<FormField
 									control={form.control}
 									name="email"
@@ -200,7 +199,7 @@ export default function Main() {
 									</FormItem>
 								)}
 							/>
-							<div className="flex">
+							<div className="flex flex-col divide-y-2 md:divide-y-0 md:flex-row">
 								<FormField
 									control={form.control}
 									name="postcode"
@@ -245,10 +244,10 @@ export default function Main() {
 											className="mr-[10px] "
 										/>
 									</FormControl>
-									<FormLabel className="text-[#4F4F4F] leading-[22px]">
+									<FormLabel className=" leading-[22px]">
 										By ticking this box, you are confirming
 										that you have read, understood, and
-										agreed to our{" "}
+										agreed to our
 										<a className="underline text-[#2F80ED]">
 											Terms of Service
 										</a>
@@ -257,6 +256,12 @@ export default function Main() {
 								</FormItem>
 							)}
 						/>
+						<Button
+							className="block lg:hidden bg-secondary font-semibold text-[14px] leading-[18px] rounded-2xl m-auto"
+							onClick={form.handleSubmit(onSubmit)}
+						>
+							GENERATE CONTRACT
+						</Button>
 					</Form>
 				</div>
 				<div className="w-full flex flex-col items-center justify-around max-w-[475px]">
@@ -267,12 +272,12 @@ export default function Main() {
 							className="object-contain w-full h-full"
 						/>
 					</div>
-					<p className="font-bold text-[30px] ">
+					<p className="font-bold text-[22px]  sm:text-[30px] text-center ">
 						Price to Pay: €3,600.00
 					</p>
 					<div>
 						<Button
-							className="bg-secondary font-semibold text-[16px]"
+							className="hidden lg:block bg-secondary font-semibold text-[16px]"
 							onClick={form.handleSubmit(onSubmit)}
 						>
 							GENERATE CONTRACT
